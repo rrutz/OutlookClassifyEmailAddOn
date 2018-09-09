@@ -212,7 +212,7 @@ main <- function()
   args = commandArgs(trailingOnly=TRUE)
   modelsDirectory <<- trimws(args[1])
   dataFile <<- trimws(args[2])
-   
+
   df.emails <<- readInData()
   df.emails <<- df.emails[!apply(df.emails == "", 1, all),]
   naiveBayesModelFit(df.emails, "body")
